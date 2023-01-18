@@ -1,66 +1,129 @@
 # tugas13
 
+
+
+
 Nama : Rafi Suswidia
+
 Nim  : 312210331
+
 Kelas: TI.22B2
+
+
 
 Berikut adalah hasil praktikum Python - Exceptions Handling yang saya terjemahkan kedalam bahasa indonesia untuk mempermudah user dalam memahami materinya.
 
+
 Python - Exceptions Handling
+
 Pengertian
+
 Pada python, ada dua fitur yang sangat penting untuk menangani kesalahan tidak terduga di dalam program dan juga menambah kemampuan debugging di dalamnya.
 
-Exception Handling - adalah suatu mekanisme pada python yang bertujuan untuk menangani sebuah error pada program. Error ini nantinya akan menghentikan program yang dijalankan dengan cara yang tidak normal.
+
+Exception Handling - adalah suatu mekanisme pada python yang bertujuan untuk menangani sebuah error pada program. Error ini nantinya akan menghentikan program yang 
+dijalankan dengan cara yang tidak normal.
+
 Assertion - pemeriksaan kewajaran yang dapat di aktifkan atau nonaktifkan setelah kita menyelesaikan uji pada program.
+
 Assertion Statement
-Saat menemukan pernyataan, Python mengevaluasi ekspresi yang menyertainya, yang mana diharapkan semoga benar. Jika ekspresi salah, Python memunculkan pengecualian AssertionError. Syntax untuk assert itu adalah : assert Expression[, Arguments] Jika pernyataan gagal, Python menggunakan ArgumentExpression sebagai argumen untuk AssertionError. AssertionError exceptions dapat ditangkap dan ditangani seperti pengecualian lainnya menggunakan try-except statement, tetapi jika dibiarkan, mereka akan menghentikan program dan menghasilkan backtrace.
+
+Saat menemukan pernyataan, Python mengevaluasi ekspresi yang menyertainya, yang mana diharapkan semoga benar. Jika ekspresi salah, Python memunculkan pengecualian 
+
+AssertionError. Syntax untuk assert itu adalah : assert Expression[, Arguments] Jika pernyataan gagal, Python menggunakan ArgumentExpression sebagai argumen untuk 
+
+AssertionError. AssertionError exceptions dapat ditangkap dan ditangani seperti pengecualian lainnya menggunakan try-except statement, tetapi jika dibiarkan, mereka 
+
+akan menghentikan program dan menghasilkan backtrace.
+
 
 Contoh
-Berikut adalah fungsi yang mengubah suhu dari derajat Kelvin menjadi derajat Fahrenheit. Karena nol derajat Kelvin sedingin itu, fungsinya akan keluar jika melihat sebuah suhu negatif. img1
+
+Berikut adalah fungsi yang mengubah suhu dari derajat Kelvin menjadi derajat Fahrenheit. Karena nol derajat Kelvin sedingin itu, fungsinya akan keluar jika melihat 
+sebuah suhu negatif. img1
+
 
 Ketika kode di atas dijalankan, menghasilkan hasil sebagai berikut - img2
 
+
 Menangani Sebuah Pengecualian
-Jika kita memiliki beberapa kode mencurigakan yang bisa memunculkan sebuah pengecualian, kita bisa mempertahankan programnya. Caranya adalah dengan menempatkan kode mencurigakan itu didalam sebuah try:block. Setelah try:block, masukkan sebuah except:statement, dibarengi dengan sebuah block kode yang menangani masalah itu dengan se-sempurna mungkin.
+
+Jika kita memiliki beberapa kode mencurigakan yang bisa memunculkan sebuah pengecualian, kita bisa mempertahankan programnya. Caranya adalah dengan menempatkan kode 
+
+mencurigakan itu didalam sebuah try:block. Setelah try:block, masukkan sebuah except:statement, dibarengi dengan sebuah block kode yang menangani masalah itu dengan 
+
+se-sempurna mungkin.
+
 
 Syntak
+
 Ini adalah sebuah syntax sederhana dari try...except...else blocks
 
+
 try:
-    Opetasi dilakukan disini;
-   ......................
+
+Opetasi dilakukan disini;
+
+......................
 except ExceptionI:
-   Jika disini adalah pengecualian1, maka blok ini akan dieksekusi.
+
+Jika disini adalah pengecualian1, maka blok ini akan dieksekusi.
 except ExceptionII:
-   Jika disini adalah pengecualian2, maka blok ini akan dieksekusi.
-   ......................
+
+Jika disini adalah pengecualian2, maka blok ini akan dieksekusi.
+
+......................
+
 else:
-   Jika sama sekali tidak ada pengecualian blok ini yang akan dieksekusi.
+
+Jika sama sekali tidak ada pengecualian blok ini yang akan dieksekusi.
+
 Berikut adalah beberapa poin penting tentang sintaks yang disebutkan di atas -
 
+
+
+
+
 Pernyataan try tunggal dapat memiliki beberapa pernyataan kecuali. pernyataan. Ini berguna saat mencoba blok berisi pernyataan yang mungkin melempar berbagai jenis pengecualian.
+
 Anda juga dapat memberikan klausa kecuali umum, yang menangani pengecualian apa pun.
-Setelah klausa kecuali, klausa, Anda dapat menyertakan sertakan klausa lain. lain-klausa. Kode di blok-lain-lain-blok dijalankan jika kode di try: block tidak memunculkan eksepsi.
+
+
+Setelah klausa kecuali, klausa, Anda dapat menyertakan sertakan klausa lain. lain-klausa. Kode di blok-lain-lain-blok dijalankan jika kode di try: block tidak 
+
+memunculkan eksepsi.
+
 Blok else adalah tempat yang bagus untuk kode yang tidak memerlukan perlindungan blok try:.
+
 Contoh
+
 Dicontoh ini akan membuka file, lalu menulis ini file, dan akan keluar dengan normal karena tidak ada masalah didalamnya. img3
+
+
 
 Ini menghasilkan hasil berikut - img4
 
 Contoh
+
 Dicontoh ini akan mencoba membuka sebuah file dimana kita tidak mempunyai izin untuk menulis, jadi nantinya akan memunculkan sebuah pengecualian. img5
 
 Ini menghasilkan hasil berikut - img6
 
 Pengecualian tanpa Exceptions
+
 Kita bisa menggunakan except statement dengan no exceptions yang didefinisikan seperti ini :
 
 try:
-   Lakukan sebuah operasi disini;
-   ......................
+
+Lakukan sebuah operasi disini;
+
+......................
+
 except:
-   Jika ada sebuah pengecualian disini, maka eksekusi blok ini.
-   ......................
+
+Jika ada sebuah pengecualian disini, maka eksekusi blok ini.
+
+......................
 else:
    Jika tidak ada pengecualian disini, maka eksekusi blok ini. 
 Pernyataan try-except jenis ini menangkap semua pengecualian yang terjadi. Menggunakan jenis pernyataan try-exception ini tidak dianggap sebagai operasi yang baik, karena semua pengecualian ditangkap, tetapi tidak memungkinkan program untuk mengidentifikasi kemungkinan penyebab masalah.
@@ -69,16 +132,29 @@ Pengecualian dengan beberapa Exceptions
 kita bisa juga menggunakan except statement untuk mengatasi beberapa exceptions seperti ini :
 
 try:
-   Lakukan sebuah operasi disini;
-   ......................
+  
+  Lakukan sebuah operasi disini;
+  
+  ......................
+
 except(Exception1[, Exception2[,...ExceptionN]]]):
-   Jika ada pengecualian dari list yang diberikan, 
-   maka eksekusi blok ini.
-   ......................
+  
+  Jika ada pengecualian dari list yang diberikan, 
+  
+  maka eksekusi blok ini.
+  
+  ......................
+
 else:
-   Jika tidak ada, maka eksekusi blok ini.
+  
+  Jika tidak ada, maka eksekusi blok ini.
+
 Try-finally
-kita bisa menggunakan sebuah finally:block bersamaan dengan sebuah try:block. Finally Block adalah sebuah tempat untuk menempatkan kode yang harus di eksekusi, apakah try-block akan memunculkan pengecualian atau tidak. Syntax dari try-finally statement adalah seperti ini :
+
+\kita bisa menggunakan sebuah finally:block bersamaan dengan sebuah try:block. Finally Block adalah sebuah tempat untuk menempatkan kode yang harus di eksekusi, a
+
+pakah try-block akan memunculkan pengecualian atau tidak. Syntax dari try-finally statement adalah seperti ini :
+
 
 try:
    Lakukan sebuah operasi disini;
